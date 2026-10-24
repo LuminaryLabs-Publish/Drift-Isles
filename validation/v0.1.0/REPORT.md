@@ -14,3 +14,5 @@ Editable source: `project/drift-isles.nexus.json`. Delivery: `builds/web/index.h
 Platform limits: packaged native Studio tested on unsigned macOS arm64 only. No Windows/Linux or physical mobile acceptance, general dynamic rigid-body physics, native game executable or perceptual audio review is claimed. Platforms are root leaf meshes. Public HTML plays without private access; rebuilding requires the matching external Studio authoring tool.
 
 No game hosting workflow is configured. Keep game hosting separate from this repository delivery. Temporary validation data is retained only as the reports/screenshots listed here; the editable game and build are deliberate deliverables.
+
+The generated HTML retains upstream Three.js shader strings verbatim, including their whitespace. `.gitattributes` marks this generated output and scopes shader whitespace exclusions to that file; handwritten source keeps normal whitespace checks.
