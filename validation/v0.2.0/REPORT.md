@@ -12,3 +12,6 @@ Engine pin: `e3b9b589c9eaad144ef815ec9fa5ab20f0806424`. Runtime: optional `confi
 Publication destination is `Website/main/drift-isles/`, served at `https://luminarylabs.dev/drift-isles/` through legacy Pages main/root. No build branch, custom Actions workflow or deployment YAML change is introduced. Public identity/hashes and production browser proof are recorded after deployment.
 
 Limits: kinematic configured platforms/rolling rather than a general rigid-body solver; unsigned macOS arm64 native Studio checked, not Windows/Linux or physical mobile. A native game executable and perceptual audio review are not claimed. The game is playable without private access; rebuilding requires access to the pinned Engine package.
+
+
+Published and verified at https://luminarylabs.dev/drift-isles/. Website commit `f09be2197a6e478ded5de0a80fc41385a3e3a2b5` is built through legacy main/root Pages. Public game/Studio hashes, homepage link/preview, standalone keyboard collection/pause/restart, offline play and published Studio open/play/save pass (`production.json`). Actual production screenshots were model-reviewed; no independent human approval is claimed. Task-owned profiles, exports/drivers and preview servers are removed; the authored game, archived original and evidence are retained. No YAML files changed.
