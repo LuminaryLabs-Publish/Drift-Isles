@@ -1,0 +1,14 @@
+{
+  "objects": 50,
+  "engineErrors": 0,
+  "portableReloadContentParity": true,
+  "jump": {
+    "startY": 1,
+    "apexY": 2.7116666666666673,
+    "landed": true,
+    "count": 1
+  },
+  "pausePreservesTime": true,
+  "checkpoints": 4,
+  "movingPlatforms": 3
+}

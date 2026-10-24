@@ -1,0 +1,20 @@
+{
+  "web": {
+    "initial": "Runtime position: 0.000, 1.000, 3.000 · Respawns: 0 · Grounded: true · Jumps: 0 · Checkpoint: cylinder-97ea36e1",
+    "jumping": "Runtime position: 0.000, 2.325, 3.000 · Respawns: 0 · Grounded: false · Jumps: 1 · Checkpoint: cylinder-97ea36e1",
+    "paused": "Runtime position: 0.000, 2.455, 3.000 · Respawns: 0 · Grounded: false · Jumps: 1 · Checkpoint: cylinder-97ea36e1",
+    "sourceObjects": 50,
+    "platformSettingsPreserved": true
+  },
+  "native": {
+    "initial": "Runtime position: 0.000, 1.000, 3.000 · Respawns: 0 · Grounded: true · Jumps: 0 · Checkpoint: cylinder-97ea36e1",
+    "jumping": "Runtime position: 0.000, 2.642, 3.000 · Respawns: 0 · Grounded: false · Jumps: 1 · Checkpoint: cylinder-97ea36e1",
+    "paused": "Runtime position: 0.000, 2.667, 3.000 · Respawns: 0 · Grounded: false · Jumps: 1 · Checkpoint: cylinder-97ea36e1",
+    "sourceObjects": 50,
+    "platformSettingsPreserved": true
+  },
+  "nativeFilesystemSave": true,
+  "nativeDialogPathsAutomated": true,
+  "platform": "macOS arm64 unsigned",
+  "pageErrors": []
+}

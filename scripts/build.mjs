@@ -1,0 +1,28 @@
+import { readFile, writeFile, mkdir, copyFile } from 'node:fs/promises';
+import { resolve, join } from 'node:path';
+import { pathToFileURL } from 'node:url';
+import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
+// Studio is an external authoring/build tool, never vendored into this repository.
+const studio = resolve(process.env.NEXUS_STUDIO_PATH || '../NexusEngine-Studio');
+const version = JSON.parse(await readFile(join(studio,'package.json'),'utf8')).version;
+const [major,minor]=version.split('.').map(Number);
+if (!(major > 0 || (major === 0 && minor >= 6))) throw Error('Use NexusEngine Studio 0.6.x or a compatible later version.');
+if (execFileSync('git',['status','--porcelain'],{cwd:studio,encoding:'utf8'}).trim()) throw Error('Build from a clean committed Studio checkout.');
+execFileSync(process.execPath,['scripts/build.mjs'],{cwd:studio,stdio:'inherit'});
+const {StudioProject, ENGINE_COMMIT} = await import(pathToFileURL(join(studio,'src/project.js')));
+const {exportGameHTML} = await import(pathToFileURL(join(studio,'src/export.js')));
+const input = await readFile('project/drift-isles.nexus.json','utf8');
+const project = new StudioProject(); project.load(JSON.parse(input));
+if(project.validate().errors) throw Error('Engine document validation failed.');
+const runtime = await readFile(join(studio,'dist/player.txt'),'utf8');
+const html=exportGameHTML(project.gameData(),runtime);
+await mkdir('builds/web',{recursive:true});
+await writeFile('builds/web/index.html',html);
+for(const name of ['nexusengine','three'])await copyFile(join(studio,`node_modules/${name}/LICENSE`),`builds/web/${name}-LICENSE.txt`);
+const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
+const files={};for(const name of ['index.html','nexusengine-LICENSE.txt','three-LICENSE.txt'])files[name]=hash(await readFile('builds/web/'+name));
+const revision=execFileSync('git',['rev-parse','HEAD'],{cwd:studio,encoding:'utf8'}).trim();
+const dirty=!!execFileSync('git',['status','--porcelain'],{cwd:studio,encoding:'utf8'}).trim();
+await writeFile('builds/web/release.json',JSON.stringify({schema:'drift-isles.release/1',version:'0.1.0',studioVersion:version,studioRevision:revision,studioDirty:dirty,engineCommit:ENGINE_COMMIT,projectSha256:hash(input),runtimeSha256:hash(runtime),objects:project.nodes().length,files},null,2)+'\n');
+console.log(`Built ${project.title}: ${project.nodes().length} editable objects. Studio ${version} (${revision.slice(0,7)}${dirty?' + working changes':''}).`);

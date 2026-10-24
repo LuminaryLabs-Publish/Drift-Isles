@@ -1,0 +1,11 @@
+{
+  "fallThroughNormalMovement": true,
+  "respawns": 1,
+  "scoreRetained": 4,
+  "checkpointRestored": true,
+  "position": [
+    0,
+    1.28,
+    2.7
+  ]
+}
