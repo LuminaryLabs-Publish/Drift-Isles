@@ -1,15 +1,17 @@
 {
-  "schema": "drift-isles.release/1",
-  "version": "0.1.0",
-  "studioVersion": "0.6.0",
-  "studioRevision": "1a3bf8a77afa312537c5ff1b5c48ff2ecf22db1f",
-  "studioDirty": false,
-  "engineCommit": "081fea1cdd9ca1662bc15116e7174d9c27821630",
-  "projectSha256": "d6d22e384bd14970b4fe447e6e4ec937626cdd431709bb3f23779d7ad129adff",
-  "runtimeSha256": "173da7a9ded3e38be619502a731888f1869de690fdebef5efe0574534ac63e05",
+  "schema": "drift-isles.release/2",
+  "version": "0.2.0",
+  "engineCommit": "e3b9b589c9eaad144ef815ec9fa5ab20f0806424",
+  "projectCompatibilityCommit": "081fea1cdd9ca1662bc15116e7174d9c27821630",
+  "runtimeKit": "configured-scene-runtime-kit",
+  "runtimeEntry": "nexusengine/kits/simulation/configured-scene-runtime/browser",
+  "studioRequiredToBuild": false,
+  "studioRequiredToRun": false,
+  "projectSha256": "00bbb9a8a188c9978c7e3ba3beff6240572f0f0912d7075cdbfb4f8aa5e98108",
+  "runtimeSha256": "d47fa9ae7a85c1e3250d52473815330a68292c1ad6aa2801965ab7cbb1a51d9c",
   "objects": 50,
   "files": {
-    "index.html": "92b11a43dcf5d85b684bc091d7008796ac0db2929b7ce7413da71f4412721d9b",
+    "index.html": "b79a2c25dbd4af252fe2e021f0faac2efa280d92f1b0759ba09cc1d8d35f8113",
     "nexusengine-LICENSE.txt": "4a0ae6ed06f277f289a4b0c20b6949640aa02bc491f0cb46b2be24d843256ca7",
     "three-LICENSE.txt": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
   }

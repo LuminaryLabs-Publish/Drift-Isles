@@ -1,2 +1,3 @@
 # Preserve upstream shader strings inside the generated standalone runtime.
 builds/web/index.html linguist-generated=true whitespace=-trailing-space,-space-before-tab
+validation/v0.2.0/runtime-modules.json linguist-generated=true

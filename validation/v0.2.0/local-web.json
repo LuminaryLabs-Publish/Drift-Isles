@@ -1,0 +1,16 @@
+{
+  "standaloneRoute": true,
+  "keyboardCollection": true,
+  "pause": true,
+  "restart": true,
+  "reducedMotionToggle": true,
+  "studioUIAbsent": true,
+  "studioOrCdnRequests": false,
+  "homepagePublicPagesLink": true,
+  "homepagePreviewLoaded": true,
+  "offlineFilePlay": true,
+  "pageErrors": [],
+  "requests": [
+    "http://127.0.0.1:4182/drift-isles/"
+  ]
+}

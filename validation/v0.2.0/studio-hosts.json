@@ -1,0 +1,28 @@
+{
+  "web": {
+    "open": true,
+    "jump": true,
+    "collect": true,
+    "pause": true,
+    "stop": true,
+    "platformSettings": true,
+    "editUndoRedo": true,
+    "save": true
+  },
+  "native": {
+    "open": true,
+    "jump": true,
+    "collect": true,
+    "pause": true,
+    "stop": true,
+    "platformSettings": true,
+    "editUndoRedo": true,
+    "save": true
+  },
+  "nativeFilesystem": true,
+  "automatedDialogPaths": true,
+  "platform": "macOS arm64 unsigned",
+  "documentContentParity": true,
+  "offlineStudioExport": true,
+  "pageErrors": []
+}

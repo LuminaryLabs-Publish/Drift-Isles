@@ -1,5 +1,5 @@
 # Drift Isles
 
-Build and retain a separate Studio-authored rolling platformer with five islands, jumping, moving platforms, twenty pickups, checkpoints and an explicit finish. Keep the editable project and independent browser release together in this public repo.
+Deliver an editable, Engine-owned standalone game and publish it at `https://luminarylabs.dev/drift-isles/`, with a public play link on the Luminary Labs homepage.
 
-Implementation, local acceptance and repeatable committed-source builds are complete. Studio source revision and hashes are recorded in `builds/web/release.json`. Game hosting is separate; no Pages workflow is configured.
+Engine extraction, project migration with original archived, Studio integration, independent build and local validation are complete. Final static publication and public hash/play checks follow. Website deploys from main/root with no YAML changes.

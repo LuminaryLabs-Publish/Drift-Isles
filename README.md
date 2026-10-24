@@ -4,13 +4,13 @@ A standalone rolling platformer authored with NexusEngine Studio. Roll across fi
 
 ## Play
 
-Open `builds/web/index.html` in a WebGL-capable desktop browser. The game is bundled and works offline. Alternatively serve `builds/web/` with any static server. No account or private repository access is needed to play this checked-in build.
+Play at **https://luminarylabs.dev/drift-isles/**. You can also open `builds/web/index.html` in a WebGL-capable desktop browser. The game is bundled and works offline. Alternatively serve `builds/web/` with any static server. No account or private repository access is needed to play this checked-in build.
 
 **WASD / arrows:** move · **Space:** jump · **R:** restart · **Escape:** pause. On-screen movement and jump controls appear for coarse pointers. Sound starts off; enable it with the Sound button. Effects respect reduced motion and can be changed during play.
 
 ## Edit in NexusEngine Studio
 
-Use **[Studio 0.6.0 or compatible later](https://luminarylabs.dev/nexus-engine-studio/)**, choose **Open**, and select `project/drift-isles.nexus.json`. Scene objects, meshes, materials and behavior settings remain editable. New Studio projects still start empty. Studio 0.5 does not support this course's moving platforms, checkpoints and jumping; opening it there does not establish correct gameplay.
+Use **[Studio 0.7.0 or compatible later](https://luminarylabs.dev/nexus-engine-studio/)**, choose **Open**, and select `project/drift-isles.nexus.json`. Scene objects, meshes, materials and behavior settings remain editable. New Studio projects still start empty. The original Studio 0.6 project is retained in `project/archive/`; the current project uses the upgraded Engine registry and should be opened in Studio 0.7 or compatible later.
 
 The project uses `nexusengine.studio-project/2` and Engine revision `081fea1cdd9ca1662bc15116e7174d9c27821630`. Browser and native Studio use the same file. Play is isolated from the authoring documents; Save stores edits, and Export creates a new standalone game.
 
@@ -18,9 +18,11 @@ Moving platforms use a travel offset, one-way time and endpoint pause in their b
 
 ## Rebuild
 
-Node 22+, a local checkout of the matching private NexusEngine Studio revision, and its installed dependencies are required to rebuild through this authoring tool. In a clean, committed Studio checkout run `npm ci`; then in this repository run `npm run build`. The adapter builds Studio first so it cannot reuse a stale runtime. Set `NEXUS_STUDIO_PATH=/absolute/path/to/NexusEngine-Studio` if Studio is not a sibling checkout.
+Node 22+ and access to the pinned NexusEngine dependency are required. Run `npm ci` then `npm run build`. Studio is not needed to build or play this game.
 
-This public repo does not vendor private Studio development source. The reproducible build adapter reads the external Studio tool, validates this project, and uses the same export template as its Export button. It records the Studio revision, project hash, runtime hash and output hashes in `builds/web/release.json`. Retain the dependency licenses with the game.
+The build loads the portable project through Engine's `SceneProject` API, validates it, bundles the Engine-owned configured scene browser host, and generates standalone HTML through Engine's export API. It records the exact Engine revision, source/runtime/output hashes and the module graph. Build guards reject Studio/editor implementations and Build/Agent execution tooling. Registry manifests are portable discovery data and remain available.
+
+NexusEngine's optional `configured-scene-runtime-kit` owns platform movement/carry, jump buffering, checkpoint recovery, scoring, finish conditions, pause/reset/snapshots and browser host adapters. Existing Core Domains retain locomotion, contact, player authority, composition and authoring. Three.js supplies rendering through the Engine Kit's optional browser adapter. The game repo owns the islands, objects, materials and settings. No server-side Studio or Engine service is required to play.
 
 ## Repository
 
@@ -30,4 +32,4 @@ This public repo does not vendor private Studio development source. The reproduc
 - `builds/web/`: independent playable browser release and provenance.
 - `validation/`: observed checks, screenshots and limitations.
 
-No Pages workflow or hosting configuration is added by this project. Native **Studio** can edit and test this project; a native **game executable** is a separate delivery target.
+Static release files are copied to `Website/main/drift-isles/`. Website Pages serves `main` from the repository root using its existing legacy deployment; there is no separate build branch or custom Actions workflow. Native **Studio** can edit and test this project; a native **game executable** is a separate delivery target.
