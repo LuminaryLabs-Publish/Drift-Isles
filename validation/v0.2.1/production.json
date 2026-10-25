@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "version": "0.2.1",
+  "primaryURL": "https://luminarylabs-publish.github.io/Drift-Isles/",
+  "roots": [
+    {
+      "root": "https://luminarylabs-publish.github.io/Drift-Isles/",
+      "status": "PASS",
+      "sourceCommit": "3e6a22562cf525748b0a617a399017847fe44dd6",
+      "files": [
+        {
+          "name": "index.html",
+          "status": 200,
+          "sha256": "b79a2c25dbd4af252fe2e021f0faac2efa280d92f1b0759ba09cc1d8d35f8113"
+        },
+        {
+          "name": "nexusengine-LICENSE.txt",
+          "status": 200,
+          "sha256": "4a0ae6ed06f277f289a4b0c20b6949640aa02bc491f0cb46b2be24d843256ca7"
+        },
+        {
+          "name": "three-LICENSE.txt",
+          "status": 200,
+          "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+        }
+      ]
+    },
+    {
+      "root": "https://luminarylabs.dev/games/drift-isles/",
+      "status": "PASS",
+      "sourceCommit": "3e6a22562cf525748b0a617a399017847fe44dd6",
+      "files": [
+        {
+          "name": "index.html",
+          "status": 200,
+          "sha256": "b79a2c25dbd4af252fe2e021f0faac2efa280d92f1b0759ba09cc1d8d35f8113"
+        },
+        {
+          "name": "nexusengine-LICENSE.txt",
+          "status": 200,
+          "sha256": "4a0ae6ed06f277f289a4b0c20b6949640aa02bc491f0cb46b2be24d843256ca7"
+        },
+        {
+          "name": "three-LICENSE.txt",
+          "status": 200,
+          "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+        }
+      ]
+    },
+    {
+      "root": "https://luminarylabs.dev/drift-isles/",
+      "status": "PASS",
+      "sourceCommit": "3e6a22562cf525748b0a617a399017847fe44dd6",
+      "files": [
+        {
+          "name": "index.html",
+          "status": 200,
+          "sha256": "b79a2c25dbd4af252fe2e021f0faac2efa280d92f1b0759ba09cc1d8d35f8113"
+        },
+        {
+          "name": "nexusengine-LICENSE.txt",
+          "status": 200,
+          "sha256": "4a0ae6ed06f277f289a4b0c20b6949640aa02bc491f0cb46b2be24d843256ca7"
+        },
+        {
+          "name": "three-LICENSE.txt",
+          "status": 200,
+          "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+        }
+      ]
+    }
+  ],
+  "websiteLinkToPublicPages": true,
+  "existingStudioNavigationPresent": true,
+  "note": "Production HTTP/hash identity proof; local headless workflow evidence is separate."
+}
