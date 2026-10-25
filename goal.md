@@ -1,5 +1,5 @@
 # Drift Isles
 
-Deliver an editable, Engine-owned standalone game and publish it at `https://luminarylabs.dev/drift-isles/`, with a public play link on the Luminary Labs homepage.
+Deliver an editable standalone NexusEngine game. Primary public Pages URL: `https://luminarylabs-publish.github.io/Drift-Isles/`. Mirror the static build at `https://luminarylabs.dev/games/drift-isles/` and preserve the existing `/drift-isles/` route. Both repositories deploy from main/root with unchanged YAML.
 
-Engine extraction, project migration with original archived, Studio integration, independent build and local validation are complete. Published and verified: Pages serves the public game; homepage link, release hashes, browser play/pause/restart, offline play and Studio interoperability pass. Task-owned temporary data is cleaned. Website deploys from main/root with no YAML changes.
+Current work: rebuild 0.2.1 through the existing Engine build, publish the static root allowlist and website mirrors after local checks, and record the rerun performance audit. This delivery change does not implement the separately specified Engine runtime fixes.

@@ -7,5 +7,7 @@
 - The committed standalone HTML plays offline without Studio. Rebuilding uses this repo's pinned NexusEngine dependency and esbuild, without Studio. Keep dependency licenses and provenance with the build; do not copy private Studio development source into this repo.
 - Keep optional synthesized sound off until enabled; support reduced motion. New Studio projects remain empty. This is a deliberate game deliverable, not temporary validation data.
 
-- Website deploys static `main` from its root. Copy the reviewed browser allowlist into `Website/drift-isles/`; the homepage link points to the public playable route, not to the GitHub repository. Preserve all deployment YAML.
+- Website deploys static `main` from its root. Publish the reviewed browser allowlist at this public repository root for `https://luminarylabs-publish.github.io/Drift-Isles/`, and mirror it into `Website/games/drift-isles/` plus the existing `Website/drift-isles/`; the homepage Play link points to the public Pages deployment. Preserve all deployment YAML.
 - The 0.6 original is archived before registry migration. `projectCompatibilityCommit` records the source-format baseline; `engineCommit` records the actual executing Engine revision.
+
+- 0.2.1 is a delivery-only rebuild. Engine gameplay/performance defects remain explicitly recorded; no runtime optimization is implied by the new publication routes.
